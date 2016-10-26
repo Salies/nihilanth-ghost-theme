@@ -1,0 +1,133 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+    <nav class="main-nav overlay clearfix">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
+    </nav>
+    <div class="main-header-content inner">
+    <a href="{{@blog.url}}">
+    <img src="{{@blog.logo}}" alt""/>
+    </a>
+    <div class="header-text">
+    <a href="{{@blog.url}}">
+    <h1 class="page-title">{{@blog.title}}</h1>
+    </a>
+    <h2 class="page-description">{{{@blog.description}}}</h2>
+    </div>
+    <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>
+</header>
+
+<main class="content" role="main">
+    <article class="{{post_class}}">
+
+        <header class="post-header">
+          <section class="post-meta">
+              <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time> {{tags prefix=" on "}}
+          </section>
+            <h1 class="post-title">{{title}}</h1>
+        </header>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+        <div class="separator">
+        <div class="sepatator-line">
+        </div>
+        </div>
+        <footer class="post-footer" style="overflow:hidden;">
+
+        {{! Everything inside the #author tags pulls data from the author }}
+        {{#author}}
+            <img src="{{image}}" alt="" class="author-f"/>
+            <section class="author">
+                <h4>Written by <a href="{{url}}">{{name}}</a></h4>
+
+                {{#if bio}}
+                    <p>{{bio}}</p>
+                {{else}}
+                    <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                {{/if}}
+                <div class="author-meta">
+                    {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
+                    {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                </div>
+                <section class="share">
+                    <h4>Share this post</h4>
+                    <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <span class="hidden">Twitter</span>
+                    </a>
+                    <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <span class="hidden">Facebook</span>
+                    </a>
+                    <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                        <span class="hidden">Google+</span>
+                    </a>
+                </section>
+            </section>
+
+        {{/author}}
+
+        </footer>
+
+<!--Nihilanth Disqus configuration-->
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+     */
+    /*
+    var disqus_config = function () {
+        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+        var d = document, s = d.createElement('script');
+
+        s.src = '//EXAMPLE.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+    </article>
+</main>
+
+<aside class="sidebar">
+  <div class="box-side" style="width:240px;height:200px;">
+    <img src="http://placehold.it/240x200"/>
+  </div>
+  <div class="box-side" style="width:240px;height:200px;">
+    <img src="http://placehold.it/240x200"/>
+  </div>
+  <div class="res-side">
+  <h3>CONTACT ME</h3>
+  <ul>
+  <li><a target="_blank" href="{{@blog.url}}">Link 1</a></li>
+  <li><a target="_blank" href="{{@blog.url}}">Link 2</a></li>
+  <li><a target="_blank" href="{{@blog.url}}">Link 3</a></li>
+  <li><a target="_blank" href="{{@blog.url}}">Link 4</a></li>
+  </ul>
+  </div>
+  <footer class="site-footer clearfix">
+      <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
+      <section class="credit">Syntax Highlighting powered by <a href="https://highlightjs.org/">highlight.js</a></section>
+      <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+  </footer>
+
+</aside>
+
+{{/post}}
