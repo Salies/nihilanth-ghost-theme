@@ -31,11 +31,11 @@ Here's a guide about how to customize your sidebar:
   </div>
 ```
 
-If you are familiar with HTML and CSS, editing this will be child's play. If you're not, here are some instructions:
+If you are familiar with HTML and CSS, editing this will be childs play. If you're not, here are some instructions:
 
-**2.** You can change the size of the firts two boxes by editing the `width:240px;height:200px;` part. It's pretty obvious that `width` stands for the width of the box, and height... I think you can figure this one out. But *I do NOT recommend* changing their widths, since they were chosen to have the best look on both 1080p and 768p resolutions, but you can set them up to 290px.
+**2.** You can change the size of the first two boxes by editing the `width:240px;height:200px;` part. It's pretty obvious that `width` stands for the width of the box, and height... I think you can figure this one out. But *I do NOT recommend* changing their widths, since they were chosen to have the best look on both 1080p and 768p resolutions, but you can set them up to 290px.
 
-**3.** You can change the boxes' content by writing whatever you want on the space between `<div class="box-side" style="width:240px;height:200px;">` and `</div>`. Remember that you will need to edit things like text and image centering by yourself. Also remember to always respect the box size that you've defined.
+**3.** You can change the boxes' content by writing whatever you want on the space between `<div class="box-side" style="width:240px;height:200px;">` and `</div>`. Remember that you will need to edit things like text and image centering by yourself. You should also remember to always respect the box sizes that you've defined.
 
 **4.** For the "Contact Me" section, the customization process is a lot easier. Just look for `<h3>CONTACT ME</h3>` (on `index.hbs` and `post.hbs`) and change whatever you want there. You can change "CONTACT ME" to whatever title you want and and the links to whatever you want too - just change the link on `href="{{@blog.url}}` to `href="your_link_here"` and Link 1, 2 3... to the text you want these links to have.
 
@@ -51,7 +51,7 @@ If you have any questions about how to do this, check out [Disqus instructions](
 
 ##Changing Syntax Highlighting
 
-Nihilanth features syntax highlighting (yay)! But you might want to change the highlighting style, and it's really simple:
+Nihilanth features syntax highlighting (yay)! But you might want to change the highlighting style, and doing this is very easy:
 
 Open your `default.hbs` file and look for `{{!Code Highlighting (highlight.js)}}`. Then follow the instructions on the comments and you're done!
 
