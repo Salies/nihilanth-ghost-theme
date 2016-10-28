@@ -4,7 +4,7 @@ A simple, clean and responsive theme for [Ghost](https://ghost.org/), inspired b
 ![showcase](https://dl.dropboxusercontent.com/u/91728511/showcase.png)
 
 ##Installation
-**1.** Download the theme right here by clicking on "Clone or Download" and then "Download ZIP".
+**1.** Download the theme right here from the "Releases" section (it's always the name with "nihilanth").
 
 **2.** Upload the theme. If you have any questions just check the [Ghost Documentation](http://docs.ghost.org/usage/settings/).
 
