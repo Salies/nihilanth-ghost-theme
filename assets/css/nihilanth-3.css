@@ -316,9 +316,9 @@ hr {
 blockquote {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.75em 0 1.75em -2.2em;
+    margin: 1.75em 0 1.75em 0em;
     padding: 0 0 0 1.75em;
-    border-left: #4A4A4A 0.4em solid;
+    border-left: #EDECE4 0.4em solid
 }
 
 blockquote p {
@@ -359,7 +359,6 @@ pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 0 1em 0;
-    border: #E3EDF3 1px solid;
     width: 100%;
     padding: 5px;
     font-family: Inconsolata, monospace, sans-serif;
