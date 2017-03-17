@@ -1,7 +1,7 @@
 # Nihilanth
 A simple, clean and responsive theme for [Ghost](https://ghost.org/), inspired by [Coding Horror](https://blog.codinghorror.com/).
 
-![showcase](https://photos-2.dropbox.com/t/2/AAC7-ocbFJp6G5A0KxnULwbREM2Kv7VZ2Zsd4fiSNleO1Q/12/91728511/png/32x32/1/_/1/2/showcase.png)
+![showcase](http://i.imgur.com/TIalI3q.png)
 
 ##Installation
 **1.** Download the theme right here from the "Releases" section (it's always the name with "nihilanth").
