@@ -3,12 +3,12 @@ A simple, clean and responsive theme for [Ghost](https://ghost.org/), inspired b
 
 ![showcase](http://i.imgur.com/TIalI3q.png)
 
-##Installation
+## Installation
 **1.** Download the theme right here from the "Releases" section (it's always the name with "nihilanth").
 
 **2.** Upload the theme. If you have any questions just check the [Ghost Documentation](http://docs.ghost.org/usage/settings/).
 
-##Sidebar
+## Sidebar
 Here's a guide about how to customize your sidebar:
 
 **1.** Open the `index.hbs` and the `post.hbs` files and look for this:
@@ -43,18 +43,18 @@ If you are familiar with HTML and CSS, editing this will be childs play. If you'
 
 **6.** If you're completely lost, I recommend checking out [some tutorials](http://www.w3schools.com/). You can also contact me (check my GitHub bio).
 
-##How to add Disqus comments
+## How to add Disqus comments
 
 Open the `post.hbs` file, look for `<!--Nihilanth Disqus configuration-->`. Replace the EXAMPLE link with your forum's link, as it says in the comments.
 
 If you have any questions about how to do this, check out [Disqus instructions](https://help.disqus.com/customer/portal/articles/472097-universal-embed-code).
 
-##Changing Syntax Highlighting
+## Changing Syntax Highlighting
 
 Nihilanth features syntax highlighting (yay)! But you might want to change the highlighting style, and doing this is very easy:
 
 Open your `default.hbs` file and look for `{{!Code Highlighting (highlight.js)}}`. Then follow the instructions on the comments and you're done!
 
-##Credits
+## Credits
 
 This theme was heavily inspired by Jeff Atwood's [Coding Horror](https://blog.codinghorror.com/), so thank him for the awesome style! I've also used [this theme](https://github.com/gergelyorosz/GhostSocialCasper) as a "guide" for creating my sidebar. So, I'd like to  thank Jeff Atwood and Gergely Orosz!
