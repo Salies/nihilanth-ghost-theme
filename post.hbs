@@ -6,7 +6,7 @@
 {{! Everything inside the #post tags pulls data from the post }}
 {{#post}}
 
-<header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+<header class="main-header {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
     <nav class="main-nav overlay clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>{{/if}}
     </nav>
@@ -44,7 +44,7 @@
 
         {{! Everything inside the #author tags pulls data from the author }}
         {{#author}}
-            <img src="{{image}}" alt="" class="author-f"/>
+            <img src="{{img_url feature_image}}" alt="" class="author-f"/>
             <section class="author">
                 <h4>Written by <a href="{{url}}">{{name}}</a></h4>
 
